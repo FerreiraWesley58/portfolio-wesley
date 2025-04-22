@@ -22,7 +22,7 @@ const Work = () => {
               exit='hidden'
               className='h2 xl:mt-12'
             >
-              My work <span className='text-accent'>.</span>
+              Meus Projetos <span className='text-accent'>.</span>
             </motion.h2>
             <motion.p
               variants={fadeIn('up', 0.4)}
@@ -31,9 +31,18 @@ const Work = () => {
               exit='hidden'
               className='mb-4 max-w-[400px] mx-auto lg:mx-0'
             >
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. A
-              eveniet dignissimos distinctio tempore harum laudantium.
+              Confira alguns dos meus trabalhos mais recentes, onde combino inovação, 
+              técnica e design para criar soluções que atendem às necessidades
+              de cada cliente.
             </motion.p>
+            <motion.div
+              variants={fadeIn('up', 0.6)}
+              initial='hidden'
+              animate='show'
+              exit='hidden'
+            >
+              <p className='text-accent text-sm mb-6'>Clique em um projeto para ver mais detalhes</p>
+            </motion.div>
           </div>
 
           {/* slider */}

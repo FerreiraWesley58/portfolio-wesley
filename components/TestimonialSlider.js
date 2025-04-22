@@ -2,24 +2,24 @@
 export const testimonialSlider = [
   {
     image: '/t-avt-1.png',
-    name: 'Anne Smith',
-    position: 'Customer',
+    name: 'Leticia',
+    position: 'Desenvolvedora de Software',
     message:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum expedita odit beatae, cupiditate saepe quam officia aut placeat quas neque!',
+      'Trabalhar com o Wesley foi uma experiência incrível! Profissionalismo, dedicação e resultados que superaram todas as minhas expectativas.',
   },
   {
     image: '/t-avt-2.png',
-    name: 'Jane Doe',
-    position: 'Customer',
+    name: 'Hudson Lucas',
+    position: 'Desenvolvedor Full Stack',
     message:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum expedita odit beatae, cupiditate saepe quam officia aut placeat quas neque!',
+      'Wesley transformou completamente o meu projeto com sua expertise e atenção aos detalhes.Foi além do esperado, só tenho elogios!',
   },
   {
     image: '/t-avt-3.png',
-    name: 'Jhon Doe',
-    position: 'Customer',
+    name: 'Mr.Kim',
+    position: 'Diretor',
     message:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum expedita odit beatae, cupiditate saepe quam officia aut placeat quas neque!',
+      'O Wesley fez uma inovação surpreendente no setor, algo que eu nunca tinha visto antes! Sua criatividade e visão trouxeram um resultado único, superando todas as expectativas.',
   },
 ];
 
