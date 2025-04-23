@@ -124,17 +124,17 @@ const aboutData = [
 const counterData = [
   {
     id: 'experience',
-    end: 8,
+    end: 3,
     text: 'Anos de experiência',
   },
   {
     id: 'projects',
-    end: 20,
+    end: 10,
     text: 'Projetos concluídos',
   },
   {
     id: 'clients',
-    end: 10,
+    end: 300,
     text: 'Clientes satisfeitos',
   },
 ];

@@ -5,126 +5,34 @@ export const workSlider = {
       images: [
         {
           id: 1,
-          title: 'E-commerce Store',
+          title: 'Gerador de QR CODE',
           path: '/thumb1.jpg',
-          description: 'Uma plataforma de comércio eletrônico completa com pagamentos integrados e gerenciamento de inventário.',
-          technologies: ['React', 'Node.js', 'MongoDB', 'Stripe'],
-          demoLink: 'https://store-demo.exemplo.com',
-          githubLink: 'https://github.com/seu-usuario/e-commerce-project',
+          description: 'Um aplicativo Python para gerar QR Codes personalizados para dízimos e ofertas, com opções de personalização e geração em lote.',
+          technologies: ['Python', 'qrcode', 'Pillow', 'Tkinter'],
+          demoLink: 'https://igreja-main.onrender.com',
+          githubLink: 'https://github.com/FerreiraWesley58/igreja-main',
+          videoPath: '/videos/qr-code-demo.mp4',
           features: [
-            'Sistema de autenticação de usuários',
-            'Carrinho de compras persistente',
-            'Processamento de pagamentos',
-            'Painel de administração'
+            'Geração de QR Codes personalizados',
+            'Suporte para dízimos e ofertas',
+            'Interface gráfica amigável',
+            'Opções de personalização de cores e tamanho',
+            'Geração em lote para múltiplos valores'
           ]
         },
         {
           id: 2,
-          title: 'App de Gerenciamento de Tarefas',
+          title: 'Assistente Virtual Empresarial',
           path: '/thumb2.jpg',
-          description: 'Aplicativo para gerenciamento de projetos e tarefas com recursos de colaboração em equipe.',
-          technologies: ['Vue.js', 'Firebase', 'Tailwind CSS'],
-          demoLink: 'https://task-app.exemplo.com',
+          description: 'Um assistente virtual que sabe tudo da empresa',
+          technologies: ['Python', 'Streamlit',],
+          demoLink: '#',
+          videoPath: '/videos/task-manager-demo.mp4',
           githubLink: 'https://github.com/seu-usuario/task-manager',
           features: [
-            'Organização de tarefas por projetos',
-            'Sistema de notificações',
+            'Perguntas e Respostas',
+            'Aprendizado com RAG',
             'Colaboração em tempo real',
-            'Visualização Kanban'
-          ]
-        },
-        {
-          id: 3,
-          title: 'Blog Tech',
-          path: '/thumb3.jpg',
-          description: 'Plataforma de blog com sistema de gerenciamento de conteúdo personalizado.',
-          technologies: ['Next.js', 'GraphQL', 'PostgreSQL'],
-          demoLink: 'https://tech-blog.exemplo.com',
-          githubLink: 'https://github.com/seu-usuario/tech-blog',
-          features: [
-            'Editor de texto rico',
-            'Categorização de artigos',
-            'Sistema de comentários',
-            'Analytics integrado'
-          ]
-        },
-        {
-          id: 4,
-          title: 'Dashboard Financeiro',
-          path: '/thumb4.jpg',
-          description: 'Dashboard para visualização e análise de dados financeiros com gráficos interativos.',
-          technologies: ['React', 'D3.js', 'Express', 'MySQL'],
-          demoLink: 'https://finance-dashboard.exemplo.com',
-          githubLink: 'https://github.com/seu-usuario/finance-dashboard',
-          features: [
-            'Visualização de dados em tempo real',
-            'Relatórios personalizados',
-            'Projeções financeiras',
-            'Exportação de dados'
-          ]
-        },
-      ],
-    },
-    {
-      images: [
-        {
-          id: 5,
-          title: 'App de Fitness',
-          path: '/thumb4.jpg',
-          description: 'Aplicativo para acompanhamento de atividades físicas, nutrição e saúde geral.',
-          technologies: ['React Native', 'Redux', 'Firebase'],
-          demoLink: 'https://fitness-app.exemplo.com',
-          githubLink: 'https://github.com/seu-usuario/fitness-app',
-          features: [
-            'Registro de atividades físicas',
-            'Planejamento de refeições',
-            'Monitoramento de progresso',
-            'Integrações com dispositivos wearable'
-          ]
-        },
-        {
-          id: 6,
-          title: 'Portfolio Criativo',
-          path: '/thumb1.jpg',
-          description: 'Portfolio para designers e criativos com galeria de projetos e funcionalidades avançadas.',
-          technologies: ['Gatsby', 'Styled Components', 'Netlify CMS'],
-          demoLink: 'https://portfolio-criativo.exemplo.com',
-          githubLink: 'https://github.com/seu-usuario/portfolio-criativo',
-          features: [
-            'Galeria de projetos',
-            'Blog integrado',
-            'Formulário de contato',
-            'Integração com redes sociais'
-          ]
-        },
-        {
-          id: 7,
-          title: 'Plataforma de Ensino',
-          path: '/thumb2.jpg',
-          description: 'LMS (Learning Management System) para cursos online com recursos para professores e alunos.',
-          technologies: ['Angular', 'Node.js', 'MongoDB', 'Socket.io'],
-          demoLink: 'https://learning-platform.exemplo.com',
-          githubLink: 'https://github.com/seu-usuario/learning-platform',
-          features: [
-            'Gestão de cursos e aulas',
-            'Fórum de discussão',
-            'Avaliações e questionários',
-            'Certificados automatizados'
-          ]
-        },
-        {
-          id: 8,
-          title: 'App de Reservas',
-          path: '/thumb3.jpg',
-          description: 'Sistema de reservas para restaurantes com gestão de mesas e clientes.',
-          technologies: ['React', 'Express', 'PostgreSQL', 'WebSockets'],
-          demoLink: 'https://reservas-app.exemplo.com',
-          githubLink: 'https://github.com/seu-usuario/reservas-app',
-          features: [
-            'Reservas em tempo real',
-            'Sistema de notificações',
-            'Painel administrativo',
-            'Histórico de clientes'
           ]
         },
       ],
@@ -152,15 +60,22 @@ import { useState } from 'react';
 const WorkSlider = () => {
   const [showModal, setShowModal] = useState(false);
   const [selectedProject, setSelectedProject] = useState(null);
+  const [showVideo, setShowVideo] = useState(false);
 
   const openProjectDetails = (project) => {
     setSelectedProject(project);
     setShowModal(true);
+    setShowVideo(false);
   };
 
   const closeModal = () => {
     setShowModal(false);
     setSelectedProject(null);
+    setShowVideo(false);
+  };
+
+  const toggleVideo = () => {
+    setShowVideo(!showVideo);
   };
 
   return (
@@ -238,65 +153,76 @@ const WorkSlider = () => {
                 </h2>
                 <div className="flex flex-wrap gap-2 mb-4">
                   {selectedProject.technologies.map((tech, index) => (
-                    <span 
-                      key={index} 
-                      className="bg-accent/20 text-accent px-3 py-1 rounded-full text-sm"
-                    >
+                    <span key={index} className="px-2 py-1 bg-accent/10 text-accent rounded-full text-sm">
                       {tech}
                     </span>
                   ))}
                 </div>
               </div>
 
-              {/* Conteúdo em Grid */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {/* Imagem do Projeto */}
-                <div className="rounded-lg overflow-hidden">
+              {/* Vídeo ou Imagem */}
+              {selectedProject.videoPath ? (
+                <div className="mb-6">
+                  <video 
+                    className="w-full rounded-lg" 
+                    controls
+                    autoPlay
+                    muted
+                  >
+                    <source src={selectedProject.videoPath} type="video/mp4" />
+                    Seu navegador não suporta o elemento de vídeo.
+                  </video>
+                </div>
+              ) : (
+                <div className="mb-6">
                   <Image 
                     src={selectedProject.path} 
-                    width={600} 
-                    height={400} 
+                    width={800} 
+                    height={450} 
                     alt={selectedProject.title}
-                    className="w-full h-auto object-cover"
+                    className="rounded-lg"
                   />
                 </div>
+              )}
 
-                {/* Detalhes do Projeto */}
-                <div>
-                  <div className="mb-6">
-                    <h3 className="text-xl font-semibold mb-2">Descrição</h3>
-                    <p className="text-gray-400">{selectedProject.description}</p>
-                  </div>
+              {/* Descrição */}
+              <div className="mb-6">
+                <h3 className="text-xl font-semibold text-white mb-2">Descrição</h3>
+                <p className="text-gray-300">{selectedProject.description}</p>
+              </div>
 
-                  <div className="mb-6">
-                    <h3 className="text-xl font-semibold mb-2">Recursos</h3>
-                    <ul className="list-disc pl-5 text-gray-400">
-                      {selectedProject.features.map((feature, index) => (
-                        <li key={index} className="mb-1">{feature}</li>
-                      ))}
-                    </ul>
-                  </div>
+              {/* Features */}
+              <div className="mb-6">
+                <h3 className="text-xl font-semibold text-white mb-2">Funcionalidades</h3>
+                <ul className="list-disc list-inside text-gray-300">
+                  {selectedProject.features.map((feature, index) => (
+                    <li key={index}>{feature}</li>
+                  ))}
+                </ul>
+              </div>
 
-                  {/* Links */}
-                  <div className="flex gap-4 mt-4">
-                    <a 
-                      href={selectedProject.demoLink} 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-2 bg-accent hover:bg-accent/80 text-white px-4 py-2 rounded-lg transition-colors"
-                    >
-                      <BsGlobe /> Demo ao Vivo
-                    </a>
-                    <a 
-                      href={selectedProject.githubLink} 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white px-4 py-2 rounded-lg transition-colors"
-                    >
-                      <BsGithub /> Ver Código
-                    </a>
-                  </div>
-                </div>
+              {/* Links */}
+              <div className="flex gap-4">
+                {selectedProject.githubLink && (
+                  <a 
+                    href={selectedProject.githubLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 text-white hover:text-accent transition-colors"
+                  >
+                    <BsGithub /> Código
+                  </a>
+                )}
+                {selectedProject.demoLink && selectedProject.demoLink !== '#' && (
+                  <a 
+                    href={selectedProject.demoLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 text-white hover:text-accent transition-colors"
+                  >
+                    <BsGlobe /> Demo
+                  </a>
+                )}
               </div>
             </div>
           </div>

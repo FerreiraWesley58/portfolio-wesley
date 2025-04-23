@@ -37,7 +37,7 @@ const Home = () => {
             exit='hidden'
             className='max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16'
           >
-            Olá, Sou Wesley, desenvolvedor de software apaixonado por criar soluções inovadoras e eficientes. Com uma experiência sólida em desenvolvimento web, eu me especializo em front-end e back-end, com ênfase no uso de tecnologias modernas como JavaScript, React, Node.js, e Next.js.
+            Olá, Sou Wesley, desenvolvedor de software apaixonado por criar soluções inovadoras e eficientes. Com uma experiência sólida em desenvolvimento web, eu me especializo em front-end e back-end, com ênfase no uso de tecnologias modernas como Python, JavaScript, React, Node.js, e Next.js.
           </motion.p>
           {/* btn */}
           <div className='flex justify-center xl:hidden relative'>
