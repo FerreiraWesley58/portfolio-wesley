@@ -113,7 +113,7 @@ const aboutData = [
       },
       {
         id: 'edu-2',
-        title: 'Técnico em Automação Industrial - FUCAPI',
+        title: 'Técnico em Eletrônica - FUCAPI',
         stage: '2016 - 2017',
       },
     ],

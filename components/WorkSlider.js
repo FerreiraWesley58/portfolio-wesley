@@ -35,6 +35,42 @@ export const workSlider = {
             'Colaboração em tempo real',
           ]
         },
+        {
+          id: 3,
+          title: 'GameFinder',
+          path: '/thumb3.jpg',
+          description: 'Website de recomendação de Jogos com interface moderna e recursos avançados',
+          technologies: ['HTML', 'CSS', 'JavaScript', 'React'],
+          demoLink: 'https://gamefinder-demo.com',
+          githubLink: 'https://github.com/seu-usuario/gamefinder',
+          videoPath: '/videos/game-recommend.mp4',
+          features: [
+            'Recomendações personalizadas baseadas em preferências',
+            'Catálogo completo de jogos com filtros avançados',
+            'Sistema de avaliação e reviews',
+            'Próximos lançamentos e destaques',
+            'Comparação de preços entre lojas',
+            'Comunidade de jogadores'
+          ]
+        },
+        {
+          id: 4,
+          title: 'AnalisaTube',
+          path: '/thumb4.jpg',
+          description: 'Um analisador de vídeos do YouTube que fornece insights detalhados sobre o conteúdo',
+          technologies: ['Python', 'YouTube API', 'Machine Learning', 'Streamlit'],
+          demoLink: 'https://analisatube-demo.com',
+          githubLink: 'https://github.com/seu-usuario/analisatube',
+          videoPath: '/videos/analisa-tube.mp4',
+          features: [
+            'Análise de sentimento dos comentários',
+            'Extração de palavras-chave do conteúdo',
+            'Estatísticas de engajamento',
+            'Recomendações de melhorias',
+            'Relatórios de desempenho',
+            'Comparativo com vídeos similares'
+          ]
+        },
       ],
     },
   ],
